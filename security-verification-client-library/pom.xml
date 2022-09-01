@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.acumos.security-verification</groupId>
 	<artifactId>security-verification-client</artifactId>
-	<version>1.2.2-SNAPSHOT</version>
+	<version>1.2.2</version>
 	<name>security-verification-client-library</name>
 	<description>Acumos Security Verification Client Library</description>
 
@@ -30,9 +30,9 @@
 	<!-- No repositories section. Only needs Maven central, aka public. -->
 	<dependencies>
 		<dependency>
-			<groupId>org.acumos.common-dataservice</groupId>
+			<groupId>ai4eu.common-dataservice</groupId>
 			<artifactId>cmn-data-svc-client</artifactId>
-			<version>3.1.0</version>
+			<version>3.2.0-ai4eu-v1</version>
 		</dependency>
 		<dependency>
 			<groupId>org.acumos.acumos-nexus-client</groupId>
@@ -204,6 +204,14 @@
 			<!-- Spring chooses <version>${logback.version}</version> -->
 		</dependency>
 	</dependencies>
+
+        <distributionManagement>
+                <repository>
+                        <id>ai4eu-repo</id>
+                        <url>https://cicd.ai4eu-dev.eu:7443/repository/maven-releases/</url>
+                </repository>
+        </distributionManagement>
+       
 	<build>
 		<plugins>
 			<plugin>
